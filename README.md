@@ -1,1 +1,1 @@
-# palingenesis
+# StockAnalysis.js
