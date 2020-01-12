@@ -17,12 +17,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-      run: |
-        curl https://install.meteor.com/ | sh
-        meteor npm update
-        meteor update
-        meteor build .
-        meteor lint
-      env:
-        CI: true
+    - name: Get Meteor
+      run: curl https://install.meteor.com/ | sh
+    - name: Download npm packages
+      run:  meteor npm update
+    - name: Download meteor packages
+      run:  meteor update
+    - name: Build project
+      run:  meteor build .
+    - name: Static analysis of project
+      run:  meteor lint
