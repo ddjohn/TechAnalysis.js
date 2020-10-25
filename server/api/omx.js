@@ -134,8 +134,17 @@ OMX = {
                         });
 		},
 		dataFeedProxy: function(data, callback) {
-        	HTTP.get(myUrl + data, {}, function(error, resp) {
-			console.log("url: " + myUrl + data);
+			console.log("dataFeedProxy: " + data);
+        	HTTP.get(myUrl + data, {
+				headers: {
+					'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+					'Accept-Language': 'en-US,en;q=0.9',
+					'Connection': 'keep-alive',
+					'Host': 'www.nasdaqomxnordic.com',
+					'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.3'
+				}
+			}, function(error, resp) {
+				console.log("url: " + myUrl + data);
             	console.log("error: " + error);
             	console.log("statuscode: " + resp.statusCode);
             	callback(JSON.parse(resp.content));
