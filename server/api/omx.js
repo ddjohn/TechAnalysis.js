@@ -59,7 +59,8 @@ Meteor.methods({
 	getOmx30Instrument: function() {
 		return [
 			"SSE3966", "SSE18634", "SSE402" , "SSE45" , "SSE3524" , "SSE15285", "SSE81"  , "SSE101" , "SSE812" , "SSE992", 
-			"SSE161" , "SSE22335", "SSE3599", "SSE220", "SSE39854", "SSE4928" , "SSE323" ,            "SSE281" , "SSE401",
+			"SSE161" , "SSE22335", "SSE3599",           "SSE39854", "SSE4928" , "SSE323" ,            "SSE281" , "SSE401",
+			//"SSE161" , "SSE22335", "SSE3599", "SSE220", "SSE39854", "SSE4928" , "SSE323" ,            "SSE281" , "SSE401",
 			"SSE340" , "SSE283"  , "SSE285" , "SSE300", "SSE120"  , "SSE361"  , "SSE1027", "SSE5095", "SSE366"     
 		];
 			//"SSE161" , "SSE22335", "SSE3599", "SSE220", "SSE39854", "SSE4928" , "SSE323" , "SSE261" , "SSE281" , "SSE401",
